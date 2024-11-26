@@ -15,32 +15,15 @@
         a:hover {
             color: blue;
         }
-
-        /*  Make each link change color when I'm in that section */
-        section:target ~ header a[data-section="Z"],
-        section:target ~ header a[data-section="K"],
-        section:target ~ header a[data-section="L"],
-        section:target ~ header a[data-section="P"],
-        section:target ~ header a[data-section="Y"],
-        section:target ~ header a[data-section="C"],
-        section:target ~ header a[data-section="I"],
-        section:target ~ header a[data-section="G"],
-        section:target ~ header a[data-section="X"] {
-            color: blue;
-            font-weight: bold;
-        }
-
         html {
             scroll-behavior: smooth;
         }
-    </style>
-    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding-top: 60px;
         }
-        header {
+        .header {
             position: fixed;
             top: 0;
             width: 100%;
@@ -50,6 +33,10 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             z-index: 1000;
         }
+        /*  Make each link change color when I'm in that section */
+        .header a:target {
+            color: blue;
+        }
         .content {
             max-width: 800px;
             margin: 0 auto;
@@ -57,22 +44,22 @@
         }
         h1 {
             margin: 0;
-	    text-align: center;
+	        text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>
-            F(<a href="#productivity" data-section="Z">Z</a>,
-            <a href="#capital" data-section="K">K</a>,
-            <a href="#labor" data-section="L">L</a>) =
-            <a href="#prices" data-section="P">P</a> x
-            <a href="#output" data-section="Y">Y</a> =
-            <a href="#consumption" data-section="C">C</a> +
-            <a href="#investment" data-section="I">I</a> +
-            <a href="#government" data-section="G">G</a> +
-            <a href="#exports" data-section="X">X</a>
+            F(<a href="#productivity">Z</a>,
+            <a href="#capital">K</a>,
+            <a href="#labor">L</a>) =
+            <a href="#prices">P</a> x
+            <a href="#output">Y</a> =
+            <a href="#consumption">C</a> +
+            <a href="#investment">I</a> +
+            <a href="#government">G</a> +
+            <a href="#exports">X</a>
         </h1>
     </header>
     <div class="content">
